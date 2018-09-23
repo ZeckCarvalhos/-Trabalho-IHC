@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 	<html>
 		<head>
+			<meta charset="utf-8">
 			<!--Import Google Icon Font-->
 			<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 			<!--Import materialize.css-->
 			<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 			<!--Let browser know website is optimized for mobile-->
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-			<title>+QI</title>
+			<link rel="shortcut icon" href="logo.ico" type="image/x-icon"/>
+			<title>+QI :: Mais Que Informação</title>
 		</head>
 
 	    <body background="+QI.png">
@@ -31,10 +33,10 @@
 
 	    	<nav>
 	    		<div class="nav-wrapper green lighten-2">
-	    			<a href="index+QI.html" class="brand-logo center">+QI</a>
+	    			<a href="index+QI.html" class="brand-logo center" id="title">+QI :: Mais Que Informação</a>
 	    			<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 	    			<ul class="right hide-on-med-and-down">
-	    				<li><a href="sobre.html">Sobre</a></li>
+	    				<li><a href="sobre.html" id="sabia">Sobre</a></li>
 	    			</ul>
 	    			<ul class="side-nav blue lighten-1" id="mobile-demo">
 	    				<li><a class="green lighten-2" href="sobre.html">Sobre</a></li>
@@ -51,17 +53,17 @@
 
 	    				<div class="card green lighten-1">
 			    	 		<div class="card-content black-text">
-			    	 				<span class="card-title"> <strong> Qual o seu gênero? </strong> </span>
+			    	 				<span class="card-title" id="cardtitle">Qual o seu gênero? <br><br> </span>
 			    	 				<div class="form-bottom">
 			    	 					<div role="form">
 			    	 						<form action="#">
 			    	 							<p class="center">			    	 															
 			    	 								<input class="with-gap" name="sexo" type="radio" id="masculino" />
-			    	 								<label for="masculino" class="white-text center"> <img width="40" height="70"class="responsive-img" src="images/masc2.png" > </label>		    	 							
+			    	 								<label for="masculino" class="white-text center"> <img width="70" height="150"class="responsive-img" src="images/masc2.png" > </label>		    	 							
 			    	 								<input class="with-gap" name="sexo" type="radio" id="outro"  />
-			    	 								<label for="outro" class="white-text center"> <img width="40" height="70"class="responsive-img" src="images/agender3.png" > </label>
+			    	 								<label for="outro" class="white-text center"> <img width="70" height="150"class="responsive-img" src="images/agender3.png" > </label>
 			    	 								<input class="with-gap" name="sexo" type="radio" id="feminino" />
-			    	 								<label for="feminino" class="white-text center"> <img width="40" height="70"class="responsive-img" src="images/fem2.png" > </label>	 
+			    	 								<label for="feminino" class="white-text center"> <img width="70" height="150"class="responsive-img" src="images/fem2.png" > </label>	 
 			    	 							</p>
 			    	 						</form>
 			    	 					</div>
@@ -71,7 +73,7 @@
 
 			    	 	<div class="card green lighten-1">
 			    	 		<div class="card-content black-text">
-			    	 			<span class="card-title"> <strong> Qual o seu tempo médio de leitura por dia? </strong> </span>
+			    	 			<span class="card-title" id="cardtitle">Qual o seu tempo médio de leitura por dia?</span>
 			    	 				<div class="form-bottom">
 			    	 					<div role="form">
 			    	 						<div class="form-group">
@@ -94,15 +96,15 @@
 
 		    			<div class="card green lighten-1">
 			    	 		<div class="card-content black-text">
-			    	 			<span class="card-title"> <strong> Qual a sua idade? </strong> </span>
+			    	 			<span class="card-title" id="cardtitle"> Qual a sua idade? <br> </span>
 			    	 				<div class="form-bottom">
 			    	 					<div role="form">
 			    	 						<div class="form-group">
-			    	 							<select id="idade" name="idade">
+			    	 							<select id="idade" name="idade" class="Icons green lighten-1">
 			    	 								<option value="" disabled selected>Selecione</option>
-			    	 								<option value="modal1" >Até 24 anos</option>
-			    	 								<option value="modal2" >De 25 a 59 anos</option>
-			    	 								<option value="modal3" >60 anos ou mais</option>
+			    	 								<option value="modal1" data-icon="images/jovem2.png" >Até 24 anos</option>
+			    	 								<option value="modal2" data-icon="images/adulto2.png">De 25 a 59 anos</option>
+			    	 								<option value="modal3" data-icon="images/terceiraidade2.png">60 anos ou mais</option>
 			    	 							</select>
 			    	 							
 			    	 							<!-- Modal Trigger -->
@@ -116,7 +118,7 @@
 
 			    		<div class="card green lighten-1">
 			    	 		<div class="card-content black-text">
-			    	 				<span class="card-title"> <strong> Você utiliza óculos para leitura? </strong> </span>
+			    	 				<span class="card-title" id="cardtitle">Você utiliza óculos para leitura? <br><br></span>
 			    	 				<div class="form-bottom">
 			    	 					<div role="form">
 			    	 						<form action="#">
@@ -134,24 +136,23 @@
 
 			    	 	<div class="card green lighten-1">
 			    	 		<div class="card-content black-text">
-			    	 				<span class="card-title"> <strong> Você utiliza quais meios para leitura? </strong> </span>
+			    	 				<span class="card-title" id="cardtitle">Você utiliza quais meios para leitura? <br> (Você pode selecionar um ou mais itens)<br></span>    	 				
 			    	 				<div class="form-bottom">
 			    	 					<div role="form">
-			    	 						<form action="#">
-			    	 							<p>
+			    	 						<form action="#">			    	 							
+			    	 							<p id="cardtitle">
 			    	 								<input name="meioLeitura" type="checkbox" class="filled-in" id="ereader"/>
-			    	 								<label for="ereader" class="black-text"><img width="140" height="270"class="responsive-img" src="images/ebook.png" align="center"> <strong> E-reader (Ex.: Kindle, Lev, Kobo) </strong> 
-			    	 								<br>* E-reader é um dispositivo para leitura de livros digitais
-			    	 								</label>
-			    	 								<br>
+			    	 								<label for="ereader" class="black-text"><img width="140" height="270"class="responsive-img" src="images/ebook.png" align="center"> <b id="sabia"> E-reader (Ex.: Kindle, Lev, Kobo)* </b> 
+			    	 								
+			    	 								</label>			    	 								
 			    	 								<br>
 			    	 								<input name="meioLeitura" type="checkbox" class="filled-in" id="livro"/>
-			    	 								<label for="livro" class="black-text"><img width="140" height="270"class="responsive-img" src="images/livros.png" align="center"> <strong> Livro </strong> </label>
-			    	 								<br>
-			    	 								<br>
+			    	 								<label for="livro" class="black-text"><img width="140" height="270"class="responsive-img" src="images/livros.png" align="center"> <b id="sabia"> Livro </b></label>
+			    	 								<br>			    	 								
 			    	 								<input name="meioLeitura" type="checkbox" class="filled-in" id="eletronico" />
-			    	 								<label for="eletronico" class="black-text"> <img width="140" height="270"class="responsive-img" src="images/eletronico.png" align="center"> <strong> Tablet, Celular ou Computador </strong></label>
+			    	 								<label for="eletronico" class="black-text"> <img width="140" height="270"class="responsive-img" src="images/eletronico.png" align="center"> <b id="sabia"> Tablet, Celular ou Computador </b></label>
 			    	 							</p>
+			    	 							<p id="sabia"><br>*E-reader é um dispositivo para leitura de livros digitais</p>
 			    	 						</form>
 			    	 						<br>
 			    	 						<button data-target="modal6" class="btn modal-trigger green lighten-2">Você Sabia?</button>
@@ -172,63 +173,66 @@
             <!-- Modals Structure -->
             <div id="modal1" class="modal blue lighten-1">
             	<div class="modal-content">
-            		<h4>Se você tem até 24 anos.</h4>
-            		<p> <strong> A recomendação é de 47 minutos de leitura continua por dia! </strong> </p>
+            		<h4 id="curiosidade">Se você tem até 24 anos:</h4>
+            		<h5 id="curiosidade">A recomendação é de 47 minutos de leitura continua por dia!</h5>
             	</div>
             	<div class="modal-footer blue lighten-2">
-            		<a href="#!" class="modal-action modal-close white-text btn-flat">Entendi</a>
+            		<a href="#!" class="modal-action modal-close white-text btn-flat" id="curiosidade">Fechar</a>
             	</div>
             </div>
 
             <div id="modal2" class="modal blue lighten-1">
             	<div class="modal-content">
-            		<h4>Se você tem de 25 a 59 anos.</h4>
-            		<p> <strong> A recomendação é de 37 minutos de leitura continua por dia! </strong> </p>
+            		<h4 id="curiosidade">Se você tem de 25 a 59 anos:</h4>
+            		<h5 id="curiosidade"> <strong> A recomendação é de 37 minutos de leitura continua por dia! </h5>
             	</div>
             	<div class="modal-footer blue lighten-2">
-            		<a href="#!" class="modal-action modal-close white-text btn-flat">Entendi</a>
+            		<a href="#!" class="modal-action modal-close white-text btn-flat" id="curiosidade">Fechar</a>
             	</div>
             </div>
 
             <div id="modal3" class="modal blue lighten-1">
             	<div class="modal-content">
-            		<h4>Se você tem 60 anos ou mais.</h4>
-            		<p> <strong> A recomendação é de 17 minutos de leitura continua por dia! </strong> </p>
+            		<h4 id="curiosidade">Se você tem 60 anos ou mais:</h4>
+            		<h5 id="curiosidade"> A recomendação é de 17 minutos de leitura continua por dia! </h5>
             	</div>
             	<div class="modal-footer blue lighten-2">
-            		<a href="#!" class="modal-action modal-close white-text btn-flat">Entendi</a>
+            		<a href="#!" class="modal-action modal-close white-text btn-flat" id="curiosidade">Fechar</a>
             	</div>
             </div>
 
 
             <div id="modal5" class="modal blue lighten-1">
             	<div class="modal-content">
-            		<h4>Você Sabia?</h4>
-            		<p> <strong> Estima-se que 44% da população brasileira não possui o hábito da leitura e 30% nunca comprou um livro. </strong></p>
+            		<h4 id="curiosidade">Você Sabia?</h4>
+            		<h5 id="curiosidade"> Estima-se que 44% da população brasileira não possui o hábito da leitura e 30% nunca comprou um livro.</h5>
             	</div>
             	<div class="modal-footer blue lighten-2">
-            		<a href="#!" class="modal-action modal-close white-text btn-flat">Entendi</a>
+            		<a href="#!" class="modal-action modal-close white-text btn-flat" id="curiosidade">Fechar</a>
             	</div>
             </div>
 
             <div id="modal6" class="modal blue lighten-1">
-            	<div class="modal-content">
-            		<h4>Você Sabia?</h4>
-            		<h5> <strong> Sobre os meios de Leitura Digital:</strong> </h5>
-            		<p> <strong>
-            			 - 56% Leem no Celular ou Smartphone<br>
-            			 - 49% Leem no Computador<br>
-            			 - 18% Leem no Tablet<br>
-            			 -  4% Leem no E-reader<br>            			
-            		<h5> <strong> Os locais mais utilizados para leitura são:</strong> </h5>
+            	<div class="modal-content" id="curiosidade">
+            		<h4 id="curiosidade">Você Sabia?</h4>
+            		<h5 id="curiosidade"> <b> Sobre os meios de Leitura Digital: </b></h5>
+            		<h5 id="curiosidade">
+            			 - 56% dos leitores utilizam Celular ou Smartphone<br>
+            			 - 49% dos leitores utilizam Computador<br>
+            			 - 18% dos leitores utilizam Tablet<br>
+            			 -  4% dos leitores utilizam E-reader<br><br>          			
+            		<b>  Os locais mais utilizados para leitura são: </b><br><br>
             			 - Casa<br>
             			 - Sala de aula<br>
-            			  - Trabalho<br>
+            			 - Trabalho<br><br>
+            		<b>  Os locais mais indicados para cada dispositivo: </b><br><br>
+            			 - E-reader: Ambientes externos e internos durante o dia. <br> Caso o e-reader ofereça iluminação própria, também é indicado para uso noturno.<br><br>
+            			 - Tablet, Celular ou Computador: Ambientes internos como casa ou escritório.<br>
 
-            		</strong> </p>
+            		</h5>
             	</div>
             	<div class="modal-footer blue lighten-2">
-            		<a href="#!" class="modal-action modal-close white-text btn-flat">Entendi</a>
+            		<a href="#!" class="modal-action modal-close white-text btn-flat" id="curiosidade">Fechar</a>
             	</div>
             </div>
 
